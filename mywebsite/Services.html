@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <!--font awesome cnd link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins';
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .service {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 3rem 8%;
+            color: #000;
+            background-image: url(background.jpg);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service .content {
+            display: flex;
+            justify-content: space-between;
+            margin: 5rem 0;
+        }
+
+        .service .content h1 {
+            font-size: 3.7rem;
+            line-height: 3.7rem;
+            letter-spacing: 1px;
+            width: 40%;
+        }
+
+        .service .content p {
+            width: 40%;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cards .card {
+            height: 220px;
+            width: 420px;
+            border: 0.5px solid rgba(135, 213, 255, 0.5);
+            border-radius: 28px;
+            display: flex;
+            flex-direction: column;
+            padding: 3rem 8%;
+            position: relative;
+            z-index: 1;
+            background-color: transparent;
+            overflow: hidden;
+            transition: .6s;
+        }
+
+        .cards .card:after {
+            position: absolute;
+            content: "";
+            height: 40%;
+            width: 8%;
+            top: 30%;
+            right: -4%;
+            background-color: #000;
+            z-index: -1;
+            border-radius: 28px;
+            transition: .6s;
+        }
+
+        .cards .card:hover {
+            color: #fff;
+        }
+
+        .cards .card:hover:after {
+            height: 100%;
+            width: 100%;
+            top: 0%;
+            right: 0%;
+        }
+
+        .cards .card h3 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .cards .card ul li {
+            margin-right: 12px;
+        }
+
+        .cards .card ul li i {
+            margin-right: 8px;
+        }
+
+        @media(max-width: 1200px) {
+            .cards {
+                grid-template-columns: repeat(2, 1rem);
+                margin: 0 auto;
+            }
+        }
+
+        @media(max-width: 1100px) {
+            .service .content h1 {
+                font-size: 3.4rem;
+            }
+
+            .service .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service .content h1,
+            .service .content p {
+                width: 100%;
+                text-align: center;
+            }
+
+            .service .content h1 {
+                font-size: 2.5rem;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+        }
+
+        @media(max-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                margin: 0 auto;
+            }
+
+            .cards .card {
+                width: 80%;
+                height: auto;
+            }
+
+            .service .content h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* footer */
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+
+        footer {
+            background: #343434;
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 1140px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer {
+            width: 33.3%;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .footer-content {
+            width: 250px;
+            margin: auto;
+            padding: 7px;
+        }
+
+        .footer-content ul {
+            text-align: center;
+        }
+
+        .list {
+            padding: 0;
+        }
+
+        .list li {
+            width: auto;
+            text-align: center;
+            list-style-type: none;
+            padding: 7px;
+            position: relative;
+        }
+
+        .list li::before {
+            content: '';
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 100px;
+            width: 0;
+            height: 2px;
+            background: #f18930;
+            transition-duration: .5s;
+        }
+
+        .list li:hover::before {
+            width: 70px;
+        }
+
+        .social-icons {
+            text-align: center;
+            padding: 0;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .social-icons i {
+            color: white;
+            font-size: 25px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #f18930;
+        }
+
+        .social-icons i:hover {
+            color: #f18930;
+        }
+
+        .bottom-bar {
+            background: #f18930;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+
+        .bottom-bar p {
+            color: #343434;
+            margin: 0;
+            font-size: 16px;
+            padding: 7px;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="service">
+        <div class="content">
+            <h1>I Make service Better</h1>
+            <p>As a skilled web developer, I specialize in building fast, responsive, and user-friendly websites that
+                engage visitors and help businesses grow. Whether you're looking for a simple landing page or a complex
+                web application, I offer a wide range of services to fit your needs.
+                Currently studying Artificial Intelligence and Machine Learning, I’m passionate about creating
+                innovative, data-driven solutions. I can help you leverage AI/ML technologies to enhance your website,
+                products, or services:</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Web-Development</h3>
+                <ul>
+                    <li><i class="fa-brands fa-html5"></i> HTML</li>
+                    <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                    <li><i class="fa-brands fa-js-square"></i> JavaScript</li>
+                    <li><i class="fa-brands fa-js-square"></i> Node.JS</li>
+
+                </ul>
+            </div>
+            <div class="card">
+                <h3>AIML Engineer</h3>
+                <ul>
+                    <li><i class="fa-solid fa-plus"></i> Using AI in Website</li>
+                    <li><i class="fa-solid fa-plus"></i> Machine Learning</li>
+                    <li><i class="fa-solid fa-plus"></i> AI Engineer</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>DataBase Development</h3>
+                <ul>
+                    <li><i class="fa-brands fa-database"></i> SQL </li>
+                    <li><i class="fa-brands fa-database"></i> mySQL </li>
+                    <li><i class="fa-brands fa-database"></i> MongoDB </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Other</h3>
+                <ul>
+                    <li><i class="fa-solid fa-python"></i> Python</li>
+                    <li><i class="fa-solid fa-code"></i> C Language</li>
+                    <li><i class="fa-solid fa-java"></i> Java Language</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email: pgade927@gmail.com</p>
+                <p>Phone: +91 74478-03779</p>
+                <p>Address: Palus Sangli Maharashtra,416310</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <!-- <li><a href="project.html">Projects</a></li> -->
+                    <li><a href="ContectMe.html">Contect Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.instagram.com/invites/contact/?igsh=1tf0w06e92xkl&utm_content=ofja8gr"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/PiyushGade02?t=zW4XnIqcUozCOomXh-muqQ&s=09"><i
+                                class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a
+                            href="https://www.linkedin.com/in/piyush-gade-89b696252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025. Piyush's .All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

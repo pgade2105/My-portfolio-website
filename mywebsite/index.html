@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piyush - Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background-color: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+
+            font-size: 3rem;
+            margin: 70px 0;
+            font-family: "Poppins", sans-serif !important;
+            font-weight: 700 !important;
+        }
+
+        .rightsection img {
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        .purple {
+            font-size: 3rem;
+            font-family: "Poppins", sans-serif !important;
+            font-weight: 700 !important;
+            color: rgb(170, 107, 228);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            height: 94px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            width: 150px;
+            color: gray;
+            /* font-size: 9px; */
+        }
+
+
+        /*Footer*/
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+
+        footer {
+            background: #343434;
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 1140px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer {
+            width: 33.3%;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .footer-content {
+            width: 250px;
+            margin: auto;
+            padding: 7px;
+        }
+
+        .footer-content ul {
+            text-align: center;
+        }
+
+        .list {
+            padding: 0;
+        }
+
+        .list li {
+            width: auto;
+            text-align: center;
+            list-style-type: none;
+            padding: 7px;
+            position: relative;
+        }
+
+        .list li::before {
+            content: '';
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 100px;
+            width: 0;
+            height: 2px;
+            background: #f18930;
+            transition-duration: .5s;
+        }
+
+        .list li:hover::before {
+            width: 70px;
+        }
+
+        .social-icons {
+            text-align: center;
+            padding: 0px;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            text-align: center;
+            /*center*/
+            padding: 5px;
+        }
+
+        .social-icons i {
+            color: white;
+            font-size: 25px;
+            /*25px*/
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .social-icons i:hover {
+            color: #f18930;
+        }
+
+        .bottom-bar {
+            background: #f18930;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 50px;
+        }
+
+        .bottom-bar p {
+            color: #343434;
+            margin: 0;
+            font-size: 16px;
+            padding: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Piyush's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <!--<li><a href="project.html">Projects</a></li>-->
+                    <li><a href="ContectMe.html">Contect Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple">Piyush</span>
+                <div class="purple" style="color: white;">and i am a passionate</div>
+                <span id="element" class="purple"></span>
+            </div>
+            <div class="rightsection">
+                <img src="developer.png.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection">
+            <span class="text-gray">What I have done so far</span>
+            <h1><!--Work Experience-->What I learned</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="AIML png.png" alt="">
+                    <div class="vertical-title">
+                        AIML Engineer
+                    </div>
+                    <div class="vertical-desc">
+                        <!-- I am learning AIML now.Now I am in 2nd year student and 4th sem and I am a web developer also I
+                        have knowledge in both fields. -->
+                        Still learing
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="HTML.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer<!--(2023-2025)-->
+                    </div>
+                    <div class="vertical-desc">
+                        I am a student and also a web developer having 2 years of experience in html language.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="CSS.png" alt="">
+                    <div class="vertical-title">
+                        CSS Developer<!--(2023-2025)-->
+                    </div>
+                    <div class="vertical-desc">
+                        I am css developer and have 2 years experience in css language.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="JS.png" alt="">
+                    <div class="vertical-title">
+                        JavaScript Developer<!--(2023-2025)-->
+                    </div>
+                    <div class="vertical-desc">
+                        <!-- I am JavaScript(JS) developer and have 3 years experience in css language. -->
+                        learning
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="NODE.png" alt="">
+                    <div class="vertical-title">
+                        NoteJS Developer<!--(2023-2025)-->
+                    </div>
+                    <div class="vertical-desc">
+                        <!-- I am NoteJS developer and have 3 years experience in NoteJS. -->
+                        Still have to learn
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="Python.png" alt="">
+                    <div class="vertical-title">
+                        Python Developer<!--(2 years)-->
+                    </div>
+                    <div class="vertical-desc">
+                        I am a Python Developer and 2 years experiencein Python Developer.
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contect Us</h3>
+                <p>Email: pgade927@gmail.com</p>
+                <p>Phone: +91 74478-03779</p>
+                <p>Address: Palus Sangli Maharashtra,416310</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <!-- <li><a href="project.html">Projects</a></li> -->
+                    <li><a href="ContectMe.html">Contect Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.instagram.com/invites/contact/?igsh=1tf0w06e92xkl&utm_content=ofja8gr"><i
+                                class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://x.com/PiyushGade02?t=zW4XnIqcUozCOomXh-muqQ&s=09"><i
+                                class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a
+                            href="https://www.linkedin.com/in/piyush-gade-89b696252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2025. Piyush's .All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'AIML Engineer.', 'Python Developer.', 'Web Desinger.'],
+            typeSpeed: 50,
+        });
+    </script>
+    
+</body>
+
+</html>
